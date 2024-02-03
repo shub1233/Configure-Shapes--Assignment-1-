@@ -1,3 +1,4 @@
+import { DoubleSide } from 'three';
 import useStore from "../Store/useStore";
 
 const Plane = ({ data }) => {
@@ -5,8 +6,8 @@ const Plane = ({ data }) => {
 
   return (
     <mesh name={name} position={position} rotation={rotation} scale={scale}>
-      <planeGeometry />
-      <meshBasicMaterial color={color} />
+      <planeGeometry args={[2, 2]} />
+      <meshStandardMaterial color={color} side={DoubleSide} />
     </mesh>
   );
 };

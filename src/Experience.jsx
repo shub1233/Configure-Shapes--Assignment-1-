@@ -6,7 +6,14 @@ const Experience = () => {
   return (
     <>
       <OrbitControls makeDefault />
-      <gridHelper name="grid" args={[55, 100, "black", "white"]}/>
+      <gridHelper name="grid" args={[55, 100, "black", "white"]} />
+      <directionalLight
+        position={[1, 2, 3]}
+        intensity={1.5}
+        shadow-normalBias={0.5}
+      />
+      
+      <ambientLight intensity={1.5} />
       <Interaction />
       <MeshCollection />
     </>

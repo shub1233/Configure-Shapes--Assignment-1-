@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Color, MeshBasicMaterial } from "three";
+import { Color, MeshBasicMaterial, MeshStandardMaterial } from "three";
 import { useGLTF } from "@react-three/drei";
 
 import useStore from "../Store/useStore";
@@ -15,7 +15,7 @@ import useStore from "../Store/useStore";
 const Model = ({ data, index }) => {
   const { fileUrl, position, rotation, scale, color } = data;
 
-  const material = new MeshBasicMaterial({ color: new Color(color) });
+  const material = new MeshStandardMaterial();
 
   const model = useGLTF(fileUrl);
 

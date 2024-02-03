@@ -5,8 +5,8 @@ const Sphere = ({ data }) => {
 
   return (
     <mesh name={name} position={position} rotation={rotation} scale={scale}>
-      <sphereGeometry />
-      <meshBasicMaterial color={color} />
+      <sphereGeometry args={[2]} />
+      <meshStandardMaterial color={color} />
     </mesh>
   );
 };

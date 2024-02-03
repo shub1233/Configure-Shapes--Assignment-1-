@@ -13,8 +13,8 @@ const Cube = ({ data }) => {
 
   return (
     <mesh name={name} position={position} rotation={rotation} scale={scale}>
-      <boxGeometry />
-      <meshBasicMaterial color={color} />
+      <boxGeometry args={[2, 2, 2]} />
+      <meshStandardMaterial color={color} />
     </mesh>
   );
 };
