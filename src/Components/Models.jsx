@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Color, MeshBasicMaterial, MeshStandardMaterial } from "three";
+import { MeshStandardMaterial } from "three";
 import { useGLTF } from "@react-three/drei";
 
 import useStore from "../Store/useStore";
